@@ -3,8 +3,17 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.4'
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# Use sqlite3 as the database for evelopment, and use POSTGRES for production
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
+
+group :development, :test do
+  gem 'sqlite3'
+  gem 'rspec-rails'
+  gem 'database_cleaner'
+end
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
@@ -31,6 +40,21 @@ group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
+
+#Seed data using FAKER
+gem 'faker'
+
+#Signin system with Devise
+gem 'devise'
+
+#allows for seurity in a single YML file
+gem 'figaro'
+
+#used with devise for authorization
+gem 'pundit'
+
+#For pagination if needed - Remove if not required
+gem 'will_paginate', '~> 3.0.5'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
