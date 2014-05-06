@@ -45,6 +45,9 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+#Made for writing and deploying a Cron job
+gem 'whenever', :require => false
+
 #Seed data using FAKER
 gem 'faker'
 
