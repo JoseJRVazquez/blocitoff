@@ -66,7 +66,7 @@ gem 'will_paginate', '~> 3.0.5'
 # Use unicorn as the app server
 # gem 'unicorn'
 
-# Use Capistrano for deployment
+# Use Capistrano for deployment is this needed?
 # gem 'capistrano', group: :development
 
 # Use debugger
